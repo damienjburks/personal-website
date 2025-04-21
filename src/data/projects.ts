@@ -17,7 +17,7 @@ export const projectsData: ProjectType[] = [
     image: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     category: "web",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/yourusername/ecommerce-platform",
+    github: "https://github.com/damienjburks/ecommerce-platform",
     demo: "https://ecommerce-example.com"
   },
   {
@@ -27,7 +27,7 @@ export const projectsData: ProjectType[] = [
     image: "https://images.pexels.com/photos/5717479/pexels-photo-5717479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     category: "web",
     tags: ["React", "Firebase", "Redux", "Tailwind"],
-    github: "https://github.com/yourusername/task-manager",
+    github: "https://github.com/damienjburks/task-manager",
     demo: "https://taskmanager-example.com"
   },
   {
@@ -37,7 +37,7 @@ export const projectsData: ProjectType[] = [
     image: "https://images.pexels.com/photos/7567444/pexels-photo-7567444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     category: "web",
     tags: ["React", "D3.js", "Express", "PostgreSQL"],
-    github: "https://github.com/yourusername/finance-dashboard",
+    github: "https://github.com/damienjburks/finance-dashboard",
     demo: "https://finance-example.com"
   },
   {
@@ -47,7 +47,7 @@ export const projectsData: ProjectType[] = [
     image: "https://images.pexels.com/photos/7521172/pexels-photo-7521172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     category: "mobile",
     tags: ["React Native", "Redux", "News API", "Firebase"],
-    github: "https://github.com/yourusername/news-app",
+    github: "https://github.com/damienjburks/news-app",
     demo: "https://news-app-example.com"
   },
   {
@@ -57,7 +57,7 @@ export const projectsData: ProjectType[] = [
     image: "https://images.pexels.com/photos/5430902/pexels-photo-5430902.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     category: "mobile",
     tags: ["React Native", "GraphQL", "MongoDB", "Maps API"],
-    github: "https://github.com/yourusername/travel-app",
+    github: "https://github.com/damienjburks/travel-app",
     demo: "https://travel-example.com"
   },
   {
@@ -67,7 +67,7 @@ export const projectsData: ProjectType[] = [
     image: "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     category: "design",
     tags: ["Figma", "UI Design", "UX Design", "Prototyping"],
-    github: "https://github.com/yourusername/portfolio-design",
+    github: "https://github.com/damienjburks/portfolio-design",
     demo: "https://portfolio-example.com"
   }
 ];

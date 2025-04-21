@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
-    { name: 'Blog', href: 'https://blogs.damienjburks.com', external: true },
+    { name: 'Blog', href: 'https://blog.damienjburks.com', external: true },
     { name: 'Projects', href: 'https://github.com/damienjburks', external: true }
   ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Cloud, Mic, Users, Github } from 'lucide-react';
+import { Shield, Cloud, Mic, Users, Github, Lock } from 'lucide-react';
 
 const Specialties: React.FC = () => {
   const specialties = [
@@ -27,6 +27,11 @@ const Specialties: React.FC = () => {
       icon: <Github className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "Open Source Contributor and Maintainer",
       description: "Actively contributing to and maintaining open source projects, fostering collaboration and innovation in the developer community."
+    },
+    {
+      icon: <Lock className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
+      title: "Secure Programming",
+      description: "Implementing robust security measures and best practices in software development, focusing on code security, vulnerability prevention, and secure architecture design."
     }
   ];
 

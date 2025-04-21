@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
           
           <div className="flex items-center">
             <p className="text-gray-400 flex items-center gap-1">
-              Made with <Heart size={16} className="text-red-500 animate-pulse" /> using React + Tailwind
+              Made with <Heart size={16} className="text-red-500 animate-pulse" /> using React + Tailwind + Bolt.ai
             </p>
           </div>
         </div>

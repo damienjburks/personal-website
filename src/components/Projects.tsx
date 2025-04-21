@@ -121,7 +121,7 @@ const Projects: React.FC = () => {
         
         <div className="text-center mt-12">
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/damienjburks" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gray-300 dark:border-gray-700 hover:border-blue-600 dark:hover:border-blue-400 font-medium transition-colors duration-200"

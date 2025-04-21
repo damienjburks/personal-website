@@ -72,10 +72,10 @@ const Contact: React.FC = () => {
                     Email
                   </h4>
                   <a 
-                    href="mailto:contact@damienjburks.com" 
+                    href="mailto:damien@damienjburks.com" 
                     className="text-gray-900 dark:text-white hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors duration-200"
                   >
-                    contact@damienjburks.com
+                    damien@damienjburks.com
                   </a>
                 </div>
               </div>
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                     Location
                   </h4>
                   <p className="text-gray-900 dark:text-white">
-                    San Francisco, California
+                    Dallas, TX
                   </p>
                 </div>
               </div>
