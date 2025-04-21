@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                     Location
                   </h4>
                   <p className="text-gray-900 dark:text-white">
-                    San Francisco, California
+                    Dallas, TX
                   </p>
                 </div>
               </div>
