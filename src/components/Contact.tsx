@@ -1,45 +1,10 @@
-import React, { useState } from 'react';
-import { Send, Mail, MapPin, Loader2, Github, Youtube } from 'lucide-react';
+import React from 'react';
+import { Mail, MapPin, Github, Youtube, Loader2 } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+  const [state, handleSubmit] = useForm("xkgrwkya");
   
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    setFormStatus('submitting');
-    
-    setTimeout(() => {
-      setFormStatus('success');
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      
-      setTimeout(() => {
-        setFormStatus('idle');
-      }, 3000);
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 md:px-6">
@@ -52,6 +17,7 @@ const Contact: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          {/* Left column - Contact Info */}
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
@@ -72,10 +38,10 @@ const Contact: React.FC = () => {
                     Email
                   </h4>
                   <a 
-                    href="mailto:damien@damienjburks.com" 
+                    href="mailto:contact@damienjburks.com" 
                     className="text-gray-900 dark:text-white hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors duration-200"
                   >
-                    damien@damienjburks.com
+                    contact@damienjburks.com
                   </a>
                 </div>
               </div>
@@ -89,7 +55,7 @@ const Contact: React.FC = () => {
                     Location
                   </h4>
                   <p className="text-gray-900 dark:text-white">
-                    Dallas, TX
+                    San Francisco, California
                   </p>
                 </div>
               </div>
@@ -147,103 +113,106 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
+          {/* Right column - Contact Form */}
           <div className="lg:col-span-3">
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
                 Send Me a Message
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Your Name
-                    </label>
-                    <input 
-                      type="text" 
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400"
-                      placeholder="John Doe"
-                    />
+              {state.succeeded ? (
+                <div className="text-center py-12">
+                  <h4 className="text-xl font-semibold text-green-600 dark:text-green-400 mb-2">Message Sent!</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Thank you for reaching out. I'll get back to you soon!</p>
+                </div>
+              ) : (
+                <form action="https://formspree.io/f/xkgrwkya" onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Your Name
+                      </label>
+                      <input 
+                        type="text" 
+                        id="name"
+                        name="name"
+                        required
+                        disabled={state.submitting}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400 disabled:opacity-60 disabled:cursor-not-allowed"
+                        placeholder="John Doe"
+                      />
+                      <ValidationError prefix="Name" field="name" errors={state.errors} className="mt-1 text-sm text-red-600 dark:text-red-400" />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Your Email
+                      </label>
+                      <input 
+                        type="email" 
+                        id="email"
+                        name="email"
+                        required
+                        disabled={state.submitting}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400 disabled:opacity-60 disabled:cursor-not-allowed"
+                        placeholder="your@email.com"
+                      />
+                      <ValidationError prefix="Email" field="email" errors={state.errors} className="mt-1 text-sm text-red-600 dark:text-red-400" />
+                    </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Your Email
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Subject
                     </label>
                     <input 
-                      type="email" 
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
+                      type="text" 
+                      id="subject"
+                      name="subject"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400"
-                      placeholder="your@email.com"
+                      disabled={state.submitting}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400 disabled:opacity-60 disabled:cursor-not-allowed"
+                      placeholder="Project Inquiry"
                     />
+                    <ValidationError prefix="Subject" field="subject" errors={state.errors} className="mt-1 text-sm text-red-600 dark:text-red-400" />
                   </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Subject
-                  </label>
-                  <input 
-                    type="text" 
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400"
-                    placeholder="Project Inquiry"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <textarea 
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400 resize-none"
-                    placeholder="Hello, I'd like to talk about..."
-                  ></textarea>
-                </div>
-                
-                <button 
-                  type="submit"
-                  disabled={formStatus === 'submitting'}
-                  className={`px-6 py-3 rounded-lg bg-yellow-600 text-white font-medium flex items-center justify-center gap-2 transition-all duration-200 ${
-                    formStatus === 'submitting' 
-                      ? 'opacity-80 cursor-not-allowed' 
-                      : 'hover:bg-yellow-700'
-                  }`}
-                >
-                  {formStatus === 'submitting' ? (
-                    <>
-                      <Loader2 size={20} className="animate-spin" />
-                      <span>Sending...</span>
-                    </>
-                  ) : formStatus === 'success' ? (
-                    <span>Message Sent!</span>
-                  ) : (
-                    <>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Message
+                    </label>
+                    <textarea 
+                      id="message"
+                      name="message"
+                      required
+                      disabled={state.submitting}
+                      rows={5}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-yellow-400 resize-none disabled:opacity-60 disabled:cursor-not-allowed"
+                      placeholder="Hello, I'd like to talk about..."
+                    ></textarea>
+                    <ValidationError prefix="Message" field="message" errors={state.errors} className="mt-1 text-sm text-red-600 dark:text-red-400" />
+                  </div>
+                  
+                  <button 
+                    type="submit"
+                    disabled={state.submitting}
+                    className={`w-full px-6 py-3 rounded-lg bg-yellow-600 text-white font-medium transition-all duration-200 flex items-center justify-center gap-2 ${
+                      state.submitting 
+                        ? 'opacity-80 cursor-not-allowed' 
+                        : 'hover:bg-yellow-700'
+                    }`}
+                  >
+                    {state.submitting ? (
+                      <>
+                        <Loader2 size={20} className="animate-spin" />
+                        <span>Sending...</span>
+                      </>
+                    ) : (
                       <span>Send Message</span>
-                      <Send size={18} />
-                    </>
-                  )}
-                </button>
-              </form>
+                    )}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
