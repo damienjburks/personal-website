@@ -60,6 +60,7 @@ const Hero: React.FC = () => {
         backgroundSize: "contain",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Dark overlay */}
