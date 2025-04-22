@@ -57,10 +57,11 @@ const Hero: React.FC = () => {
       className="min-h-screen pt-24 pb-16 flex flex-col justify-center relative overflow-hidden"
       style={{
         backgroundImage: `url(${heroimg})`,
-        backgroundSize: "contain",
+        backgroundSize: "100% 100%",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
+        backgroundColor: "#000000", // Fallback color
       }}
     >
       {/* Dark overlay */}
