@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ArrowDown } from "lucide-react";
 
+import heroimg from "../assets/images/hero.png";
+
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState("");
   const [showContent, setShowContent] = useState(false);
@@ -54,9 +56,8 @@ const Hero: React.FC = () => {
       id="home"
       className="min-h-screen pt-24 pb-16 flex flex-col justify-center relative overflow-hidden"
       style={{
-        backgroundImage:
-          'url("https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg")',
-        backgroundSize: "cover",
+        backgroundImage: `url(${heroimg})`,
+        backgroundSize: "contain",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code, Palette, Database, Terminal } from 'lucide-react';
+import React from "react";
+import { Code, Palette, Database, Terminal } from "lucide-react";
 
 interface Skill {
   name: string;
@@ -15,49 +15,49 @@ interface SkillCategory {
 const Skills: React.FC = () => {
   const skillCategories: SkillCategory[] = [
     {
-      title: 'Frontend Development',
+      title: "Frontend Development",
       icon: <Code size={24} />,
       skills: [
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'React', level: 85 },
-        { name: 'TypeScript', level: 80 },
-        { name: 'Next.js', level: 75 }
-      ]
+        { name: "HTML/CSS", level: 95 },
+        { name: "JavaScript", level: 90 },
+        { name: "React", level: 85 },
+        { name: "TypeScript", level: 80 },
+        { name: "Next.js", level: 75 },
+      ],
     },
     {
-      title: 'Design & UI/UX',
+      title: "Design & UI/UX",
       icon: <Palette size={24} />,
       skills: [
-        { name: 'Figma', level: 85 },
-        { name: 'UI Design', level: 80 },
-        { name: 'UX Principles', level: 75 },
-        { name: 'Responsive Design', level: 90 },
-        { name: 'Design Systems', level: 70 }
-      ]
+        { name: "Figma", level: 85 },
+        { name: "UI Design", level: 80 },
+        { name: "UX Principles", level: 75 },
+        { name: "Responsive Design", level: 90 },
+        { name: "Design Systems", level: 70 },
+      ],
     },
     {
-      title: 'Backend & Database',
+      title: "Backend & Database",
       icon: <Database size={24} />,
       skills: [
-        { name: 'Node.js', level: 80 },
-        { name: 'Express', level: 75 },
-        { name: 'MongoDB', level: 70 },
-        { name: 'SQL', level: 65 },
-        { name: 'Firebase', level: 80 }
-      ]
+        { name: "Node.js", level: 80 },
+        { name: "Express", level: 75 },
+        { name: "MongoDB", level: 70 },
+        { name: "SQL", level: 65 },
+        { name: "Firebase", level: 80 },
+      ],
     },
     {
-      title: 'Tools & Deployment',
+      title: "Tools & Deployment",
       icon: <Terminal size={24} />,
       skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Webpack', level: 75 },
-        { name: 'AWS', level: 60 },
-        { name: 'Docker', level: 65 },
-        { name: 'CI/CD', level: 70 }
-      ]
-    }
+        { name: "Git", level: 90 },
+        { name: "Webpack", level: 75 },
+        { name: "AWS", level: 60 },
+        { name: "Docker", level: 65 },
+        { name: "CI/CD", level: 70 },
+      ],
+    },
   ];
 
   return (
@@ -67,13 +67,15 @@ const Skills: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             My <span className="text-blue-600 dark:text-blue-400">Skills</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">What I bring to the table</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            What I bring to the table
+          </p>
           <div className="mt-4 h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto rounded-full"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
             >
@@ -85,7 +87,7 @@ const Skills: React.FC = () => {
                   {category.title}
                 </h3>
               </div>
-              
+
               <div className="space-y-5">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
@@ -98,11 +100,11 @@ const Skills: React.FC = () => {
                       </span>
                     </div>
                     <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000"
-                        style={{ 
+                        style={{
                           width: `${skill.level}%`,
-                          animation: `progress-${skillIndex} 1.5s ease-in-out` 
+                          animation: `progress-${skillIndex} 1.5s ease-in-out`,
                         }}
                       ></div>
                     </div>

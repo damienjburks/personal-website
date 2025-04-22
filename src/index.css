@@ -6,9 +6,20 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
   }
 }
 
@@ -16,11 +27,11 @@
   .animate-fadeIn {
     animation: fadeIn 1s ease-in-out forwards;
   }
-  
+
   .animate-fadeUp {
     animation: fadeUp 1s ease-in-out forwards;
   }
-  
+
   .animate-blink {
     animation: blink 1s step-end infinite;
   }
@@ -51,7 +62,8 @@
 }
 
 @keyframes blink {
-  from, to {
+  from,
+  to {
     opacity: 1;
   }
   50% {

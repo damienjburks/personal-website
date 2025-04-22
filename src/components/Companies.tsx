@@ -37,7 +37,7 @@ const Companies: React.FC = () => {
     {
       src: "https://cdn.brandfetch.io/idXhrQrb5t/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
       alt: "Verizon",
-    }
+    },
   ];
 
   const scroll = (direction: "left" | "right") => {
@@ -78,7 +78,8 @@ const Companies: React.FC = () => {
             I've Left My Mark On
           </h2>
           <p className="text-gray-600 dark:text-gray-400">
-            From Fortune 100s to open-source stages, I’ve built, secured, and spoken where impact matters.
+            From Fortune 100s to open-source stages, I’ve built, secured, and
+            spoken where impact matters.
           </p>
           <div className="mt-4 h-1 w-20 bg-yellow-600 dark:bg-yellow-400 mx-auto rounded-full"></div>
         </div>

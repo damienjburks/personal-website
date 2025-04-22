@@ -1,5 +1,5 @@
-import React from 'react';
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import React from "react";
+import { Calendar, MapPin, ExternalLink } from "lucide-react";
 
 interface Talk {
   id: string;
@@ -20,16 +20,17 @@ const YouTubeVideos: React.FC = () => {
       date: "October 1st, 2024",
       location: "New York City, NY",
       thumbnail: "https://i.ytimg.com/vi/8hMRahzwK3k/maxresdefault.jpg",
-      link: "https://youtu.be/8hMRahzwK3k?si=UniaLjEl87Xbz7UN"
+      link: "https://youtu.be/8hMRahzwK3k?si=UniaLjEl87Xbz7UN",
     },
     {
       id: "2",
-      title: "AWS re:Inforce 2023 - How Citi advanced their containment capabilities through automation (TDR201)",
+      title:
+        "AWS re:Inforce 2023 - How Citi advanced their containment capabilities through automation (TDR201)",
       event: "AWS re:Inforce 2023",
       date: "July 19th, 2023",
       location: "Anaheim, CA",
       thumbnail: "https://i.ytimg.com/vi/rHUs61Te_JE/maxresdefault.jpg",
-      link: "https://youtu.be/rHUs61Te_JE?si=M5ttlqjQuZkrr_Vk"
+      link: "https://youtu.be/rHUs61Te_JE?si=M5ttlqjQuZkrr_Vk",
     },
     {
       id: "3",
@@ -38,8 +39,8 @@ const YouTubeVideos: React.FC = () => {
       date: "December 3rd, 2024",
       location: "Virtual Event",
       thumbnail: "https://i.ytimg.com/vi/otleFroshZU/maxresdefault.jpg",
-      link: "https://youtu.be/otleFroshZU?si=qeuS94vtldR7ZlVe"
-    }
+      link: "https://youtu.be/otleFroshZU?si=qeuS94vtldR7ZlVe",
+    },
   ];
 
   return (
@@ -47,9 +48,12 @@ const YouTubeVideos: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured <span className="text-yellow-600 dark:text-yellow-400">Talks</span>
+            Featured{" "}
+            <span className="text-yellow-600 dark:text-yellow-400">Talks</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">Sharing knowledge through speaking engagements</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            Sharing knowledge through speaking engagements
+          </p>
           <div className="mt-4 h-1 w-20 bg-yellow-600 dark:bg-yellow-400 mx-auto rounded-full"></div>
         </div>
 
