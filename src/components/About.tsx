@@ -126,7 +126,7 @@ const About: React.FC = () => {
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               In addition to engineering, I’m a digital creator and educator. I
-              founded The DevSec Blueprint — an open-source platform and
+              founded The DevSec Blueprint, an open-source platform and
               learning space dedicated to helping others break into Cloud
               Security and DevSecOps. I also run a growing YouTube channel and
               LinkedIn presence, where I share insights, tutorials, and career

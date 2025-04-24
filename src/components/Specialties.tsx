@@ -7,25 +7,25 @@ const Specialties: React.FC = () => {
       icon: <Shield className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "DevSecOps",
       description:
-        "I bring security into every step of the pipeline. From Jenkins to GitHub Actions, I’ve embedded tools like Trivy and SonarQube to catch issues before they become problems — building secure, automated workflows that scale across teams and environments.",
+        "I bring security into every step of the pipeline. From Jenkins to GitHub Actions, I’ve embedded tools like Trivy and SonarQube to catch issues before they become problems. I am an advocate for building secure, automated workflows that scale across teams and environments.",
     },
     {
       icon: <Cloud className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "Cloud Security Development",
       description:
-        "I design and secure cloud infrastructure in AWS and GCP with a focus on doing things the right way — IAM hardening, compliance guardrails, and detection controls included. Whether it’s Terraform or Docker, I’m all about shipping secure by default.",
+        "I design and secure cloud infrastructure in AWS and GCP with a focus on doing things the right way. All things IAM hardening, compliance guardrails, and detection controls included. Whether it’s Terraform or Docker, I’m all about shipping secure by default.",
     },
     {
       icon: <Mic className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "Speaking",
       description:
-        "I’ve shared my journey and lessons learned at AWS re:Invent, re:Inforce, and on podcasts like Cloud Security Podcast — breaking down complex security topics and making them approachable for engineers, builders, and security pros alike.",
+        "I’ve shared my journey and lessons learned at AWS re:Invent, re:Inforce, and on podcasts like Cloud Security Podcast, where I break down complex security topics and making them approachable for engineers, builders, and security pros alike.",
     },
     {
       icon: <Users className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "Mentoring",
       description:
-        "I mentor BIPOC LGBTQ+ folks trying to break into cloud and security — sharing everything I’ve learned, from building labs to navigating career moves. It’s personal, and it’s about opening doors for the next generation.",
+        "I mentor BIPOC LGBTQ+ folks trying to break into cloud and security. I'm on open board - sharing everything I’ve learned, from building labs to navigating career moves. It’s personal, and it’s about opening doors for the next generation.",
     },
     {
       icon: <Github className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
@@ -37,7 +37,7 @@ const Specialties: React.FC = () => {
       icon: <Lock className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "Secure Programming",
       description:
-        "Whether it’s appsec, containers, or secure design, I bring a builder’s mindset to security. I’ve baked in SAST, dependency scanning, and secure coding checks into dev workflows — making sure apps are solid before they hit prod.",
+        "Whether it’s appsec, containers, or secure design, I bring a builder’s mindset to security. I’ve baked in SAST, dependency scanning, and secure coding checks into dev workflows, ensuring apps are solid before they hit prod.",
     },
   ];
 
