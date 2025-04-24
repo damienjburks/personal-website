@@ -105,8 +105,8 @@ const About: React.FC = () => {
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               Over the past several years, I’ve carved out a career at the
-              intersection of cloud engineering, security, and automation —
-              specializing in Cloud DevSecOps and Cloud Security Engineering
+              intersection of cloud engineering, security, and automation. I
+              specialize in Cloud DevSecOps and Cloud Security Engineering
               across regulated, large-scale environments. I've led initiatives
               that integrate preventive and detective controls into CI/CD
               pipelines, reduce technical debt through Infrastructure as Code,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, Github } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,6 +58,16 @@ const Navbar: React.FC = () => {
                 </li>
               ))}
             </ul>
+
+            <a
+              href="https://github.com/damienjburks/personal-website"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-yellow-600 transition-colors duration-200"
+              aria-label="View source on GitHub"
+            >
+              <Github size={20} />
+            </a>
 
             <button
               onClick={toggleTheme}
