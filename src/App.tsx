@@ -5,7 +5,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Companies from "./components/Companies";
 import Specialties from "./components/Specialties";
-import YouTubeVideos from "./components/YouTubeVideos";
+import YoutubeVideos from "./components/YoutubeVideos";
+import TalkVideos from "./components/Talks";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -19,7 +20,8 @@ function App() {
           <About />
           <Companies />
           <Specialties />
-          <YouTubeVideos />
+          <YoutubeVideos />
+          <TalkVideos />
           <Contact />
         </main>
         <Footer />
