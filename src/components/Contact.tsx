@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
             <span className="text-yellow-600 dark:text-yellow-400">Touch</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Let's discuss your project
+            Hit me up if you want to chat!
           </p>
           <div className="mt-4 h-1 w-20 bg-yellow-600 dark:bg-yellow-400 mx-auto rounded-full"></div>
         </div>
@@ -27,8 +27,9 @@ const Contact: React.FC = () => {
                 Contact Information
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
-                Feel free to reach out to me any time. I prefer email
+                Feel free to reach out to me anytime. I prefer email
                 communication, but I'm available through other channels as well.
+                The best way to get in touch is to fill out the form on the right.
               </p>
             </div>
 
