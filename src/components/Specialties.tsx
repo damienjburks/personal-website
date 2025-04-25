@@ -31,7 +31,7 @@ const Specialties: React.FC = () => {
       icon: <Github className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "Open Source Contributor and Maintainer",
       description:
-        "I lead and contribute to projects like Common Cloud Controls (CCC) and Open Policy Agent (OPA), where I help define controls, write Terraform policies, and push the envelope on cloud-native security.",
+        "I lead and contribute to projects like Common Cloud Controls (CCC) and Open Policy Agent (OPA), where I help define controls, write OPA & Sentinel policies for Terraform, and push the envelope on cloud-native security.",
     },
     {
       icon: <Lock className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
