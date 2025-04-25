@@ -27,9 +27,9 @@ const Contact: React.FC = () => {
                 Contact Information
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
-                Feel free to reach out to me anytime. I prefer email
-                communication, but I'm available through other channels as well.
-                The best way to get in touch is to fill out the form on the right.
+                I'm always open to discussing new projects, creative ideas, or
+                opportunities to make an impact! Feel free to reach out
+                to me via the contact form, via email, or through my social media profiles.
               </p>
             </div>
 

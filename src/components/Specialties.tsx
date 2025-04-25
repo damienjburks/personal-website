@@ -13,7 +13,7 @@ const Specialties: React.FC = () => {
       icon: <Cloud className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
       title: "Cloud Security Development",
       description:
-        "I design and secure cloud infrastructure in AWS and GCP with a focus on doing things the right way. All things IAM hardening, compliance guardrails, and detection controls included. Whether it’s Terraform or Docker, I’m all about shipping secure by default.",
+        "I design and secure cloud infrastructure in AWS and GCP with a focus on doing things the right way. IAM hardening, compliance guardrails, and detection controls included. Whether it’s Terraform or Docker, I’m all about shipping secure by default.",
     },
     {
       icon: <Mic className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
