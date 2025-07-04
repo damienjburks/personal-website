@@ -1,13 +1,7 @@
 name: Wait for Amplify Build Status
 
 on:
-  workflow_dispatch:
-  pull_request:
-    types: [opened, synchronize]
-
-permissions:
-  id-token: write
-  contents: read
+  workflow_call:
 
 jobs:
   wait-for-amplify-build:
@@ -27,7 +21,7 @@ jobs:
           APP_ID="${{ secrets.AMPLIFY_APP_ID }}"
           BRANCH_NAME="${{ github.head_ref || github.ref_name }}"
           MAX_RETRIES=20
-          DELAY=15  # seconds
+          DELAY=60  # 1 minute delay
           COUNT=0
 
           echo "Polling Amplify build status for branch: $BRANCH_NAME"

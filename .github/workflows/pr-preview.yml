@@ -1,14 +1,7 @@
 name: Amplify Preview URL Comment
 
 on:
-  pull_request:
-    types: [opened, synchronize]
-
-permissions:
-  id-token: write
-  contents: read
-  pull-requests: write
-
+    workflow_call:
 jobs:
   comment-preview-url:
     runs-on: ubuntu-latest
