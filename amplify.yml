@@ -1,3 +1,9 @@
+# This YAML file defines configuration settings for an application or service.
+# It typically includes parameters such as environment variables, service endpoints,
+# authentication credentials, and other customizable options required for deployment
+# or runtime behavior. Each key-value pair represents a specific configuration item,
+# and nested structures may be used to organize related settings. Ensure sensitive
+# information is handled securely and not exposed in version control.
 version: 1
 applications:
   - frontend:
