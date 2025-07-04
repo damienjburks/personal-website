@@ -105,8 +105,8 @@ const About: React.FC = () => {
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               Over the past several years, I’ve carved out a career at the
-              intersection of cloud engineering, security, and automation —
-              specializing in Cloud DevSecOps and Cloud Security Engineering
+              intersection of cloud engineering, security, and automation. I
+              specialize in Cloud DevSecOps and Cloud Security Engineering
               across regulated, large-scale environments. I've led initiatives
               that integrate preventive and detective controls into CI/CD
               pipelines, reduce technical debt through Infrastructure as Code,
@@ -125,12 +125,21 @@ const About: React.FC = () => {
             </p>
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-              In addition to engineering, I’m a digital creator and educator. I
-              founded The DevSec Blueprint — an open-source platform and
-              learning space dedicated to helping others break into Cloud
-              Security and DevSecOps. I also run a growing YouTube channel and
-              LinkedIn presence, where I share insights, tutorials, and career
-              guidance for early to mid-career professionals.
+              In addition to engineering, I’m a content creator and educator. I
+              founded{" "}
+              <a
+                href="https://www.devsecblueprint.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-600 dark:text-yellow-400 hover:underline"
+              >
+                The DevSec Blueprint
+              </a>
+              , an open-source platform and learning space dedicated to helping
+              others break into Cloud Security and DevSecOps. I also run a
+              growing YouTube channel and LinkedIn presence, where I share
+              insights, tutorials, and career guidance for early to mid-career
+              professionals.
             </p>
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">

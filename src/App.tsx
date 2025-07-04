@@ -1,4 +1,3 @@
-import React from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -6,6 +5,7 @@ import About from "./components/About";
 import Companies from "./components/Companies";
 import Specialties from "./components/Specialties";
 import YouTubeVideos from "./components/YouTubeVideos";
+import TalkVideos from "./components/Talks";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -20,6 +20,7 @@ function App() {
           <Companies />
           <Specialties />
           <YouTubeVideos />
+          <TalkVideos />
           <Contact />
         </main>
         <Footer />
