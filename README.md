@@ -5,7 +5,6 @@
 ![GitHub Stars](https://img.shields.io/github/stars/damienjburks/personal-website?logo=github&style=for-the-badge)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/damienjburks/personal-website?logo=github&style=for-the-badge)
 ![CI Status](https://img.shields.io/github/actions/workflow/status/damienjburks/personal-website/main.yml?style=for-the-badge)
-![Powered by AWS Amplify](https://img.shields.io/badge/Powered%20By-AWS%20Amplify-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 ![Image](./public/images/preview.png)
 
@@ -15,7 +14,7 @@ This repository contains the source code for my personal website! The site serve
 
 - **Frontend Framework**: Vue.js
 - **Styling**: Tailwind CSS
-- **Hosting**: AWS Amplify
+- **Hosting**: GitHub Pages
 - **CI/CD**: GitHub-integrated deployments
 - **Domain**: [damienjburks.com](https://www.damienjburks.com)
 
