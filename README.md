@@ -49,10 +49,6 @@ npm run build
 
 This site is automatically deployed via **AWS Amplify** on every push to the `main` branch. Amplify handles preview builds for feature branches and manages custom domain linking via Route 53.
 
-## 📸 Preview
-
-![Website Preview](./public/preview.png)
-
 ## 🤝 Contributing
 
 This is a personal project, but feel free to fork and adapt the structure for your own portfolio. Please give credit if you use substantial parts of the code.
