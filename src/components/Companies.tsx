@@ -38,6 +38,10 @@ const Companies: React.FC = () => {
       src: "https://cdn.brandfetch.io/idXhrQrb5t/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
       alt: "Verizon",
     },
+    {
+      src: "https://cdn.brandfetch.io/idJFz6sAsl/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+      alt: "LinkedIn",
+    },
   ];
 
   const scroll = (direction: "left" | "right") => {

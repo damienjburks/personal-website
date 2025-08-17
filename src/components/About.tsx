@@ -115,18 +115,18 @@ const About: React.FC = () => {
             </p>
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-              My work has supported Fortune 100 enterprises and high-impact
-              financial institutions, with a focus on multi-cloud security,
-              scalable infrastructure design, and enabling secure software
-              delivery. I’ve contributed to open-source projects such as the
-              Common Cloud Controls (CCC) initiative by FINOS and Open Policy
-              Agent (OPA) to help advance industry standards for policy-as-code
-              and compliance automation.
+              My experience spans enterprises, financial organizations, and
+              innovative tech companies, where I’ve focused on advancing
+              multi-cloud security, building scalable infrastructure, and
+              enabling secure software delivery. Beyond engineering, I
+              contribute to the open-source security community through projects
+              like Common Cloud Controls (CCC) with FINOS and Open Policy Agent
+              (OPA), helping push forward industry standards for compliance
+              automation and policy-as-code.
             </p>
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-              In addition to engineering, I’m a content creator and educator. I
-              founded{" "}
+              I’m also a content creator and educator. As the founder of{" "}
               <a
                 href="https://www.devsecblueprint.com"
                 target="_blank"
@@ -135,17 +135,18 @@ const About: React.FC = () => {
               >
                 The DevSec Blueprint
               </a>
-              , an open-source platform and learning space dedicated to helping
-              others break into Cloud Security and DevSecOps. I also run a
-              growing YouTube channel and LinkedIn presence, where I share
-              insights, tutorials, and career guidance for early to mid-career
-              professionals.
+              , I’m building an open-source learning platform for Cloud Security
+              and DevSecOps. On YouTube and LinkedIn, I share tutorials,
+              insights, and career guidance to support early- and mid-career
+              professionals entering this space.
             </p>
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               Beyond the cloud, you’ll find me watching anime (Demon Slayer),
               playing story-rich games (Persona 5 Royal), or falling down
-              YouTube rabbit holes about cars and DIY tech builds.
+              YouTube rabbit holes about cars and DIY tech builds. Outside of
+              work and content, I’m always chasing curiosity, whether it’s
+              through tech, creativity, or community.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
