@@ -9,10 +9,11 @@ const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const roles = [
-    "Cloud DevSecOps Engineer",
+    "Cloud Security Engineer",
+    "DevSecOps Educator",
     "Content Creator",
+    "LinkedIn Instructor",
     "AWS Community Builder",
-    "Educator",
     "Speaker",
     "Mentor",
   ];
