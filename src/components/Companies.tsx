@@ -7,16 +7,24 @@ const Companies: React.FC = () => {
 
   const images = [
     {
-      src: "https://cdn.brandfetch.io/idRfyoxqM5/w/543/h/126/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
-      alt: "FINOS",
-    },
-    {
       src: "https://cdn.brandfetch.io/idVoqFQ-78/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
       alt: "Amazon Web Services",
     },
     {
-      src: "https://cdn.brandfetch.io/idh5Lm_qXI/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
-      alt: "Whizlabs",
+      src: "https://cdn.brandfetch.io/idr8xpMOko/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+      alt: "Citi",
+    },
+    {
+      src: "https://cdn.brandfetch.io/idW1Fn8k71/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B",
+      alt: "Cloud Security Podcast",
+    },
+    {
+      src: "https://cdn.brandfetch.io/idcm0sustl/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1684919445915",
+      alt: "FICO",
+    },
+    {
+      src: "https://cdn.brandfetch.io/idRfyoxqM5/w/543/h/126/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
+      alt: "FINOS",
     },
     {
       src: "https://cdn.brandfetch.io/idaj7u6MtJ/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
@@ -27,20 +35,16 @@ const Companies: React.FC = () => {
       alt: "Styra",
     },
     {
-      src: "https://cdn.brandfetch.io/idW1Fn8k71/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B",
-      alt: "Cloud Security Podcast",
-    },
-    {
-      src: "https://cdn.brandfetch.io/idr8xpMOko/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
-      alt: "Citi",
-    },
-    {
       src: "https://cdn.brandfetch.io/idXhrQrb5t/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
       alt: "Verizon",
     },
     {
       src: "https://cdn.brandfetch.io/idJFz6sAsl/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
       alt: "LinkedIn",
+    },
+    {
+      src: "https://cdn.brandfetch.io/idh5Lm_qXI/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+      alt: "Whizlabs",
     },
   ];
 
