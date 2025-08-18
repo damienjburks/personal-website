@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
             }`}
           >
             <p className="mt-6 text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              Breaking down silos, building up security.... one pipeline at a
+              Breaking down silos, building up security.... one cloud pipeline at a
               time.
             </p>
           </div>
