@@ -4,7 +4,7 @@
 ![GitHub Forks](https://img.shields.io/github/forks/damienjburks/personal-website?logo=github&style=for-the-badge)
 ![GitHub Stars](https://img.shields.io/github/stars/damienjburks/personal-website?logo=github&style=for-the-badge)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/damienjburks/personal-website?logo=github&style=for-the-badge)
-![CI Status](https://img.shields.io/github/actions/workflow/status/damienjburks/personal-website/main.yml?style=for-the-badge)
+![CI Status](https://img.shields.io/github/actions/workflow/status/damienjburks/personal-website/deploy.yml?style=for-the-badge)
 
 ![Image](./public/images/preview.png)
 
