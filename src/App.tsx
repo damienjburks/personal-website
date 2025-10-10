@@ -6,6 +6,7 @@ import Companies from "./components/Companies";
 import Specialties from "./components/Specialties";
 import YouTubeVideos from "./components/YouTubeVideos";
 import TalkVideos from "./components/Talks";
+import Courses from "./components/Courses";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -21,6 +22,7 @@ function App() {
           <Specialties />
           <YouTubeVideos />
           <TalkVideos />
+          <Courses />
           <Contact />
         </main>
         <Footer />
