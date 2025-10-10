@@ -38,57 +38,53 @@ const Courses: React.FC = () => {
           <div className="mt-4 h-1 w-20 bg-green-600 dark:bg-green-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto">
           {courses.map((course) => (
             <a
               key={course.id}
               href={course.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group block bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-video relative overflow-hidden">
-                <img
-                  src={course.thumbnail}
-                  alt={course.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ExternalLink size={48} className="text-white" />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="relative overflow-hidden md:aspect-auto aspect-video">
+                  <img
+                    src={course.thumbnail}
+                    alt={course.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ExternalLink size={56} className="text-white" />
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full">
-                    <BookOpen size={14} />
-                    {course.platform}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 dark:text-gray-400">
-                    <Clock size={14} />
-                    {course.duration}
-                  </span>
+                <div className="p-8 flex flex-col justify-center">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full font-medium">
+                      <BookOpen size={18} />
+                      {course.platform}
+                    </span>
+                    <span className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                      <Clock size={18} />
+                      {course.duration}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200 mb-4">
+                    {course.title}
+                  </h3>
+                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {course.description}
+                  </p>
+                  <div className="mt-6">
+                    <span className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 font-medium group-hover:gap-3 transition-all duration-200">
+                      View Course
+                      <ExternalLink size={20} />
+                    </span>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200 line-clamp-2 mb-3">
-                  {course.title}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
-                  {course.description}
-                </p>
               </div>
             </a>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="https://www.linkedin.com/in/damienjburks/details/courses/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-medium transition-colors duration-200"
-          >
-            <span>View All Courses</span>
-            <ExternalLink size={20} />
-          </a>
         </div>
       </div>
     </section>
