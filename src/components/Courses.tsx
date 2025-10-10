@@ -38,16 +38,15 @@ const Courses: React.FC = () => {
           <div className="mt-4 h-1 w-20 bg-green-600 dark:bg-green-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-md">
-            {courses.map((course) => (
-              <a
-                key={course.id}
-                href={course.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {courses.map((course) => (
+            <a
+              key={course.id}
+              href={course.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+            >
               <div className="aspect-video relative overflow-hidden">
                 <img
                   src={course.thumbnail}
@@ -78,7 +77,6 @@ const Courses: React.FC = () => {
               </div>
             </a>
           ))}
-          </div>
         </div>
 
         <div className="text-center mt-12">
