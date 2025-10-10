@@ -17,7 +17,7 @@ const Courses: React.FC = () => {
       id: "1",
       title: "Cloud Security for DevSecOps Engineers: From Security Models to API Protection",
       platform: "LinkedIn Learning",
-      duration: "1h 30m",
+      duration: "2h 39m",
       thumbnail: "https://camo.githubusercontent.com/5ef5abe1d5b3ee397b308f56dd1a508b322ba8b506fe6a3befe470199dc2f666/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f646d732f696d6167652f76322f4434453044415148516f3033644a722d484f772f6c6561726e696e672d7075626c69632d63726f705f3637355f313230302f4234455a6d686668526e486741632d2f302f313735393335313031383931323f653d3231343734383336343726763d6265746126743d5475644c4745574f34723057515f4e34756e747273745f44794c793749777377424d743636584a6a4c3551",
       link: "https://www.linkedin.com/learning/cloud-security-for-devsecops-engineers-from-security-models-to-api-protection",
       description: "Learn essential cloud security concepts and practices for DevSecOps engineers, covering security models, API protection, and practical implementation strategies.",
