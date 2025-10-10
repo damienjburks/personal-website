@@ -25,20 +25,20 @@ const Courses: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-8 pb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
             Featured{" "}
-            <span className="text-green-600 dark:text-green-400">Courses</span>
+            <span className="text-yellow-600 dark:text-yellow-400">Courses</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-400 mb-2">
             Educational content to help you master Cloud Security & DevSecOps
           </p>
-          <div className="mt-4 h-1 w-20 bg-green-600 dark:bg-green-400 mx-auto rounded-full"></div>
+          <div className="mt-2 h-1 w-20 bg-yellow-600 dark:bg-yellow-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="w-full">
           {courses.map((course) => (
             <a
               key={course.id}
@@ -47,8 +47,8 @@ const Courses: React.FC = () => {
               rel="noopener noreferrer"
               className="group block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="grid md:grid-cols-5 gap-4">
-                <div className="md:col-span-2 relative overflow-hidden">
+              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div className="lg:col-span-2 md:col-span-1 relative overflow-hidden min-h-[260px] flex items-center justify-center">
                   <img
                     src={course.thumbnail}
                     alt={course.title}
@@ -58,9 +58,9 @@ const Courses: React.FC = () => {
                     <ExternalLink size={40} className="text-white" />
                   </div>
                 </div>
-                <div className="md:col-span-3 p-6 flex flex-col justify-center">
+                <div className="lg:col-span-4 md:col-span-2 p-4 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full font-medium">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-full font-medium">
                       <BookOpen size={14} />
                       {course.platform}
                     </span>
@@ -69,14 +69,14 @@ const Courses: React.FC = () => {
                       {course.duration}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200 mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors duration-200 mb-2">
                     {course.title}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-4">
                     {course.description}
                   </p>
                   <div>
-                    <span className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 font-medium text-sm group-hover:gap-3 transition-all duration-200">
+                    <span className="inline-flex items-center gap-2 text-yellow-600 dark:text-yellow-400 font-medium text-sm group-hover:gap-3 transition-all duration-200">
                       View Course
                       <ExternalLink size={16} />
                     </span>
