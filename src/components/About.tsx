@@ -137,7 +137,7 @@ const About: React.FC = () => {
               </a>
               , I’m building an open-source learning platform for Cloud Security
               and DevSecOps. On YouTube and LinkedIn, I share tutorials,
-              insights, and career guidance to support early- and mid-career
+              insights, and career guidance to support early and mid-career
               professionals entering this space.
             </p>
 

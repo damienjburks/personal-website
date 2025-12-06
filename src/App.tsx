@@ -5,7 +5,7 @@ import About from "./components/About";
 import Companies from "./components/Companies";
 import Specialties from "./components/Specialties";
 import YouTubeVideos from "./components/YouTubeVideos";
-import TalkVideos from "./components/Talks";
+import Speaking from "./components/Speaking";
 import Courses from "./components/Courses";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -21,7 +21,7 @@ function App() {
           <Companies />
           <Specialties />
           <YouTubeVideos />
-          <TalkVideos />
+          <Speaking />
           <Courses />
           <Contact />
         </main>

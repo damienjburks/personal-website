@@ -19,6 +19,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Speaking", href: "#speaking" },
     { name: "Contact", href: "#contact" },
     { name: "Blog", href: "https://blog.damienjburks.com", external: true },
     {
