@@ -83,7 +83,7 @@ const Speaking: React.FC = () => {
         "A session focused on the security gaps in AWS Macie and Trend Micro Cloud One, which detect sensitive or malicious content in S3 but do not auto-remediate misconfigurations or quarantine malicious files. The talk introduces DataCop, an open-source tool that automates S3 remediation actions using findings from Macie and Cloud One. Attendees will see a breakdown of DataCop’s architecture—including services used, remediation flows, IAM considerations, and development tooling—and will leave with practical guidance on automating S3 risk remediation at scale.",
       thumbnail: "https://i.ytimg.com/vi/-vIJBvUA4hI/maxresdefault.jpg",
       videoLink: "https://www.youtube.com/watch?v=-vIJBvUA4hI",
-      topics: ["AWS Security", "AWS Macie", "Data Protection", "Automation"],
+      topics: ["AWS Security", "AWS Macie", "Trend Micro", "Data Protection", "Automation"],
     },
     {
       title: "Automated S3 Blocking with AWS Macie & DataCop",
