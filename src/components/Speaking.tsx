@@ -35,7 +35,8 @@ const Speaking: React.FC = () => {
       description:
         "A re:Invent session showcasing how the DSB Blogging Assistant automates turning YouTube videos into polished blog posts using AWS. The workflow detects new uploads, processes them through Step Functions and Lambda, uses Amazon Bedrock to generate content, and publishes directly to GitHub. The talk covers the problem creators face, the end-to-end architecture, and how AI plus event-driven design enables scalable content automation.",
       thumbnail: "/images/speaking_engagements/reinvent_2024_dev_322.png",
-      videoLink: "https://github.com/devsecblueprint/dsb-blogging-assistant/blob/main/docs/conferences/reinvent_2024/DEV322.pdf",
+      videoLink:
+        "https://github.com/devsecblueprint/dsb-blogging-assistant/blob/main/docs/conferences/reinvent_2024/DEV322.pdf",
       topics: ["AI", "Cloud Security", "Security Development", "AWS", "Kiro"],
     },
     {
@@ -60,6 +61,40 @@ const Speaking: React.FC = () => {
       thumbnail: "https://i.ytimg.com/vi/rHUs61Te_JE/maxresdefault.jpg",
       videoLink: "https://youtu.be/rHUs61Te_JE?si=M5ttlqjQuZkrr_Vk",
       topics: ["AWS Security", "Incident Response", "Automation"],
+    },
+    {
+      title:
+        "How Citi advanced their containment and forensic capabilities through automation",
+      event: "fwd:cloudsec 2023",
+      date: "July 18th, 2023",
+      location: "Anaheim, CA",
+      description:
+        "A fwd:cloudsec session showing how Citi built a scalable, automated incident response framework across 28 AWS services. Using AWS Step Functions and Lambda to orchestrate NIST-based workflows, Citi reduced containment time by about 5 hours and eliminated human error. The talk includes real-world examples and a live demo demonstrating how teams can design efficient, scalable incident response solutions on AWS.",
+      thumbnail: "https://i.ytimg.com/vi/DygEQUVZBjc/maxresdefault.jpg",
+      videoLink: "https://www.youtube.com/watch?v=DygEQUVZBjc",
+      topics: ["AWS Security", "Incident Response", "Automation"],
+    },
+    {
+      title: "Minimizing AWS S3 bucket attack vectors at scale",
+      event: "BSidesDFW 2022",
+      date: "November 29th, 2022",
+      location: "Fort Worth, TX",
+      description:
+        "A session focused on the security gaps in AWS Macie and Trend Micro Cloud One, which detect sensitive or malicious content in S3 but do not auto-remediate misconfigurations or quarantine malicious files. The talk introduces DataCop, an open-source tool that automates S3 remediation actions using findings from Macie and Cloud One. Attendees will see a breakdown of DataCop’s architecture—including services used, remediation flows, IAM considerations, and development tooling—and will leave with practical guidance on automating S3 risk remediation at scale.",
+      thumbnail: "https://i.ytimg.com/vi/-vIJBvUA4hI/maxresdefault.jpg",
+      videoLink: "https://www.youtube.com/watch?v=-vIJBvUA4hI",
+      topics: ["AWS Security", "AWS Macie", "Data Protection", "Automation"],
+    },
+    {
+      title: "Automated S3 Blocking with AWS Macie & DataCop",
+      event: "DevOpsDays DFW 2022",
+      date: "August 31st, 2022",
+      location: "Dallas, TX",
+      description:
+        "A DevOpsDays DFW talk covering the automation gaps in AWS Macie, which detects sensitive data in S3 but does not prevent or remediate misconfigurations. The session introduces DataCop, an open-source solution that automates S3 risk remediation based on Macie findings. Attendees will see a deep dive into DataCop’s architecture—including AWS services used, S3 remediation flows, IAM considerations, and development tooling—and will leave with practical guidance on automating data-risk remediation in S3 environments.",
+      thumbnail: "https://i.ytimg.com/vi/xPvfD-gsuo4/maxresdefault.jpg",
+      videoLink: "https://www.youtube.com/watch?v=xPvfD-gsuo4",
+      topics: ["AWS Security", "AWS Macie", "Data Protection", "Automation"],
     },
   ];
 
