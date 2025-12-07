@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
     "Cloud Security Engineer",
     "DevSecOps Educator",
     "Content Creator",
-    "LinkedIn Instructor",
+    "LinkedIn Learning Instructor",
     "AWS Community Builder",
     "Speaker",
     "Mentor",
