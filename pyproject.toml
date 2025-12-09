@@ -1,0 +1,8 @@
+[project]
+name = "personal-portfolio"
+version = "1.0.0"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "invoke>=2.2.1",
+]
