@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 flex items-center gap-1">
               Made with{" "}
               <Heart size={16} className="text-red-500 animate-pulse" /> using
-              React + Tailwind + Bolt.ai
+              React + Tailwind + <span className="text-purple-400">Kiro</span>. Powered by <span className="text-orange-400">AWS</span>.
             </p>
           </div>
         </div>
