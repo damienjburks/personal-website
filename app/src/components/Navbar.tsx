@@ -20,20 +20,19 @@ const Navbar: React.FC = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Speaking", href: "#speaking" },
-    { name: "Contact", href: "#contact" },
     { name: "Blog", href: "https://blog.damienjburks.com", external: true },
     {
       name: "Projects",
       href: "https://github.com/damienjburks",
       external: true,
     },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/90 backdrop-blur-sm shadow-md" : "bg-black"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-black/90 backdrop-blur-sm shadow-md" : "bg-black"
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6 py-4">
         <nav className="flex items-center justify-between">

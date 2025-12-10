@@ -49,7 +49,7 @@ def invalidate(c, distribution_id):
     """Invalidate CloudFront cache."""
     print(f"🔄 Invalidating CloudFront cache: {distribution_id}")
     result = c.run(
-        f"aws cloudfront create-invalidation --distribution-id {distribution_id} --paths '/*'",
+        f"aws cloudfront create-invalidation --distribution-id {distribution_id} --paths '/index.html' '/assets/*' '/images/*'",
         hide=True,
         pty=False
     )
