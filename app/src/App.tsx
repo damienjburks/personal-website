@@ -20,7 +20,7 @@ function App() {
           <About />
           <Companies />
           <Specialties />
-          <YouTubeVideos />
+          {/* <YouTubeVideos /> */}
           <Speaking />
           <Courses />
           <Contact />
