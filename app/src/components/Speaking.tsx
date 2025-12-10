@@ -1,5 +1,6 @@
 import React from "react";
 import { Calendar, MapPin, ExternalLink, FileText } from "lucide-react";
+import reinventImage from "../assets/images/reinvent_2024_dev_322.png";
 
 interface SpeakingEngagement {
   title: string;
@@ -34,7 +35,7 @@ const Speaking: React.FC = () => {
       location: "Las Vegas, NV",
       description:
         "A re:Invent session showcasing how the DSB Blogging Assistant automates turning YouTube videos into polished blog posts using AWS. The workflow detects new uploads, processes them through Step Functions and Lambda, uses Amazon Bedrock to generate content, and publishes directly to GitHub. The talk covers the problem creators face, the end-to-end architecture, and how AI plus event-driven design enables scalable content automation.",
-      thumbnail: "/images/speaking_engagements/reinvent_2024_dev_322.png",
+      thumbnail: reinventImage,
       videoLink:
         "https://github.com/devsecblueprint/dsb-blogging-assistant/blob/main/docs/conferences/reinvent_2024/DEV322.pdf",
       topics: ["AI", "Cloud Security", "Security Development", "AWS", "Kiro"],
