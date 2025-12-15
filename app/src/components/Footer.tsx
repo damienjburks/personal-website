@@ -17,8 +17,11 @@ const Footer: React.FC = () => {
           <div className="flex items-center">
             <p className="text-gray-400 flex items-center gap-1">
               Made with{" "}
-              <Heart size={16} className="text-red-500 animate-pulse" /> using
-              React + Tailwind + <span className="text-purple-400">Kiro</span>. Powered by <span className="text-orange-400">AWS</span>.
+              <Heart size={16} className="text-red-500 animate-pulse" /> using{" "}
+              <span style={{ color: '#61DAFB' }}>React</span> +{" "}
+              <span className="text-cyan-500">Tailwind</span> +{" "}
+              <span className="text-purple-400">Kiro</span>. Powered by{" "}
+              <span className="text-orange-400">AWS</span>.
             </p>
           </div>
         </div>
