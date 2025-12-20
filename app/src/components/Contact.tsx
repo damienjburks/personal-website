@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, MapPin, Github, Youtube, Loader2 } from "lucide-react";
+import { Mail, MapPin, Github, Youtube, Loader2, Calendar } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const Contact: React.FC = () => {
@@ -28,8 +28,7 @@ const Contact: React.FC = () => {
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
                 I'm always open to discussing new projects, creative ideas, or
-                opportunities to make an impact! Feel free to reach out
-                to me via the contact form, via email, or through my social media profiles.
+                opportunities to make an impact! You can reach out via the contact form below, send me an email, schedule a meeting through Topmate, or connect on social media.
               </p>
             </div>
 
@@ -123,6 +122,16 @@ const Contact: React.FC = () => {
                   aria-label="YouTube"
                 >
                   <Youtube size={20} />
+                </a>
+
+                <a
+                  href="https://topmate.io/damienjburks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-yellow-600 hover:text-white dark:hover:bg-yellow-600 dark:hover:text-white transition-colors duration-200"
+                  aria-label="Book a Meeting"
+                >
+                  <Calendar size={20} />
                 </a>
               </div>
             </div>
