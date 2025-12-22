@@ -55,6 +55,7 @@ resource "aws_route53_record" "txt_verification" {
   type    = "TXT"
   ttl     = 300
   records = [
-    "v=spf1 include:_spf.google.com include:_spf-us.ionos.com ~all"
+    "v=spf1 include:_spf.google.com include:_spf-us.ionos.com ~all",
+    "google-site-verification=eDQzjL9WdUfdQBKJVDMsxD4TBXH8nSinU_ygPG_GxNc"
   ]
 }
