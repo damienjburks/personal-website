@@ -22,6 +22,15 @@ const Courses: React.FC = () => {
       link: "https://www.linkedin.com/learning/cloud-security-for-devsecops-engineers-from-security-models-to-api-protection",
       description: "Designed for new and early-career DevSecOps engineers, this course introduces cloud security through a DevSecOps lens. Get started by learning the fundamentals of cloud computing, service models, and the shared responsibility model. Explore the importance of key security services and control types, such as identity and access management (IAM), encryption, logging, and network segmentation, as well as API security fundamentals in cloud-native environments. Along the way, instructor Damien Burks dives into the essentials of infrastructure as code (IaC), showing you how to identify common risks, enforce compliance with policy as code, and automate security checks at scale using tools like Trivy. By the end of this course, you’ll be prepared to effectively apply key DevSecOps principles and concepts within the cloud security space. This course is integrated with GitHub Codespaces, an instant cloud development environment that offers all the functionality of your favorite IDE without the need for any local machine setup. With GitHub Codespaces, you can get hands-on practice from any machine, at any time—all while using a tool that you’ll likely encounter in the workplace. Check out the “Using GitHub Codespaces with this course” video to learn how to get started."
     },
+    {
+      id: "2",
+      title: "Build Secure AWS Pipelines with GitHub Actions and OIDC",
+      platform: "LinkedIn Learning",
+      duration: "1h 16m",
+      thumbnail: "https://camo.githubusercontent.com/8ec2218727e4e7b6e05cc4843749be5e991cd1051729e014f2c4eea6f252d38a/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f646d732f696d6167652f76322f4434453044415146786130695232486e7853412f6c6561726e696e672d7075626c69632d63726f705f3637355f313230302f4234455a377759763272494141592d2f302f313738323134393438303534303f653d3231343734383336343726763d6265746126743d5435314f6f4c4469434535553051626a76797852527a6f38454a6a307a6c67536d6a764f5551774b656c6f",
+      link: "https://www.linkedin.com/learning/build-secure-aws-pipelines-with-github-actions-and-oidc",
+      description: "Learn how to build secure CI/CD pipelines on AWS using GitHub Actions with OpenID Connect (OIDC) authentication. This course covers eliminating long-lived AWS credentials by leveraging OIDC for short-lived, scoped access tokens. Explore how to configure IAM roles, trust policies, and GitHub Actions workflows to securely deploy infrastructure and applications to AWS without storing static access keys."
+    },
   ];
 
   return (
@@ -38,7 +47,7 @@ const Courses: React.FC = () => {
           <div className="mt-2 h-1 w-20 bg-yellow-600 dark:bg-yellow-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="w-full">
+        <div className="w-full space-y-8">
           {courses.map((course) => (
             <a
               key={course.id}
