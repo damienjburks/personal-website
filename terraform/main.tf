@@ -9,7 +9,7 @@ module "website" {
   enable_replication          = true
   enable_security_headers     = true
   create_route53_zone         = true
-  enable_waf                  = true
+  enable_waf                  = false
   security_notification_email = "damien@damienjburks.com"
   primary_region              = var.primary_region
   failover_region             = var.failover_region
