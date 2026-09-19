@@ -2,7 +2,9 @@ name: Test Cronjob
 
 on:
   schedule:
-    - cron: "* * * * *"
+    # Every 5 minutes (minimum interval GitHub Actions allows)
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 jobs:
   hello:
