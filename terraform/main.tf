@@ -33,29 +33,52 @@ resource "aws_route53_record" "blog_a" {
   ]
 }
 
-# Google Workspace MX records (for email)
-resource "aws_route53_record" "mx" {
-  zone_id = module.website.route53_zone_id
-  name    = "damienjburks.com"
-  type    = "MX"
-  ttl     = 300
-  records = [
-    "1 aspmx.l.google.com",
-    "5 alt1.aspmx.l.google.com",
-    "5 alt2.aspmx.l.google.com",
-    "10 alt3.aspmx.l.google.com",
-    "10 alt4.aspmx.l.google.com",
-  ]
-}
-
-# Google site verification TXT record
+# ProtonMail apex TXT records: domain verification + SPF
 resource "aws_route53_record" "txt_verification" {
   zone_id = module.website.route53_zone_id
   name    = "damienjburks.com"
   type    = "TXT"
   ttl     = 300
   records = [
-    "v=spf1 include:_spf.google.com include:_spf-us.ionos.com ~all",
-    "google-site-verification=eDQzjL9WdUfdQBKJVDMsxD4TBXH8nSinU_ygPG_GxNc"
+    "protonmail-verification=${var.TFC_PROTONMAIL_CODE}",
+    "v=spf1 include:_spf.protonmail.ch ~all",
+  ]
+}
+
+# ProtonMail MX records (route incoming mail to Proton)
+resource "aws_route53_record" "proton_mx" {
+  zone_id = module.website.route53_zone_id
+  name    = "damienjburks.com"
+  type    = "MX"
+  ttl     = 300
+  records = [
+    "10 mail.protonmail.ch.",
+    "20 mailsec.protonmail.ch.",
+  ]
+}
+
+# ProtonMail DKIM records (CNAMEs; Proton rotates keys via these)
+resource "aws_route53_record" "proton_dkim" {
+  for_each = {
+    "protonmail._domainkey"  = "protonmail.domainkey.dnno2e4dpevq46vhndyghnox5rdipy6cxbpi6vvvu6hceyscoywma.domains.proton.ch."
+    "protonmail2._domainkey" = "protonmail2.domainkey.dnno2e4dpevq46vhndyghnox5rdipy6cxbpi6vvvu6hceyscoywma.domains.proton.ch."
+    "protonmail3._domainkey" = "protonmail3.domainkey.dnno2e4dpevq46vhndyghnox5rdipy6cxbpi6vvvu6hceyscoywma.domains.proton.ch."
+  }
+
+  zone_id = module.website.route53_zone_id
+  name    = "${each.key}.damienjburks.com"
+  type    = "CNAME"
+  ttl     = 300
+  records = [each.value]
+}
+
+# ProtonMail DMARC record
+resource "aws_route53_record" "proton_dmarc" {
+  zone_id = module.website.route53_zone_id
+  name    = "_dmarc.damienjburks.com"
+  type    = "TXT"
+  ttl     = 300
+  records = [
+    "v=DMARC1; p=quarantine"
   ]
 }
