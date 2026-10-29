@@ -1,5 +1,3 @@
-variable "TFC_PROTONMAIL_CODE" {}
-
 variable "bucket_name" {
   type        = string
   description = "Name for the S3 bucket (must be globally unique)"

@@ -33,52 +33,40 @@ resource "aws_route53_record" "blog_a" {
   ]
 }
 
-# ProtonMail apex TXT records: domain verification + SPF
-resource "aws_route53_record" "txt_verification" {
+# ---------------------------------------------------------------------------
+# Google Workspace
+# ---------------------------------------------------------------------------
+# Apex TXT records: domain verification + SPF
+# (Route 53 allows only one TXT record per name, so both live here.)
+resource "aws_route53_record" "google_site_verification" {
   zone_id = module.website.route53_zone_id
   name    = "damienjburks.com"
   type    = "TXT"
   ttl     = 300
   records = [
-    "protonmail-verification=${var.TFC_PROTONMAIL_CODE}",
-    "v=spf1 include:_spf.protonmail.ch ~all",
+    "google-site-verification=31DtAV5WPBaJFjDnMY62MNnTxci77PcZFmVwbg-SLKU",
+    "v=spf1 include:_spf.google.com ~all",
   ]
 }
 
-# ProtonMail MX records (route incoming mail to Proton)
-resource "aws_route53_record" "proton_mx" {
+# Google Workspace MX record (route incoming mail to Google)
+resource "aws_route53_record" "google_mx" {
   zone_id = module.website.route53_zone_id
   name    = "damienjburks.com"
   type    = "MX"
   ttl     = 300
   records = [
-    "10 mail.protonmail.ch.",
-    "20 mailsec.protonmail.ch.",
+    "1 smtp.google.com."
   ]
 }
 
-# ProtonMail DKIM records (CNAMEs; Proton rotates keys via these)
-resource "aws_route53_record" "proton_dkim" {
-  for_each = {
-    "protonmail._domainkey"  = "protonmail.domainkey.dnno2e4dpevq46vhndyghnox5rdipy6cxbpi6vvvu6hceyscoywma.domains.proton.ch."
-    "protonmail2._domainkey" = "protonmail2.domainkey.dnno2e4dpevq46vhndyghnox5rdipy6cxbpi6vvvu6hceyscoywma.domains.proton.ch."
-    "protonmail3._domainkey" = "protonmail3.domainkey.dnno2e4dpevq46vhndyghnox5rdipy6cxbpi6vvvu6hceyscoywma.domains.proton.ch."
-  }
-
+# DKIM — Google signing key (1024-bit; fits within the 255-char TXT limit)
+resource "aws_route53_record" "google_dkim" {
   zone_id = module.website.route53_zone_id
-  name    = "${each.key}.damienjburks.com"
-  type    = "CNAME"
-  ttl     = 300
-  records = [each.value]
-}
-
-# ProtonMail DMARC record
-resource "aws_route53_record" "proton_dmarc" {
-  zone_id = module.website.route53_zone_id
-  name    = "_dmarc.damienjburks.com"
+  name    = "google._domainkey.damienjburks.com"
   type    = "TXT"
   ttl     = 300
   records = [
-    "v=DMARC1; p=quarantine"
+    "v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2r2iles/Cf/1pTThQ0cb4Z/TJkxZRpFScFkcvEF1SNt/4xGD8OyN8Z864xvemxhVaA4ew8ZVxmiZSiXEBqtV8YcW3zdvv6eUtnK7qVGhKdR1qxoV6dhulR6S3T1TOvx0g4BIKplkQhpXoXRxU6iYYJ81G/m5OL6yZj/yTDRLgpwIDAQAB"
   ]
 }
